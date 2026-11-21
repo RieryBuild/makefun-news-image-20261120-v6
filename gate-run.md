@@ -167,3 +167,33 @@ All 8 questions pass (MQ3 conditional on the coordinator's live quota
 re-check). Gates 0–3 pass, with Gate 1's two provider-side gaps recorded
 above (OpenRouter 429, Gemini 503). READY FOR SUBMIT pending the
 coordinator's quota re-check + literal gate-row audit + bundle/check.
+
+## Post-gate fix — coordinator audit, 22 Nov 2026 ~03:10 WITA (fix agent)
+
+Two documentation/accuracy items found in the coordinator's literal
+gate-row audit; image re-rendered, docs corrected, re-verified, pushed
+as a new commit on top of HEAD dc7bf0c6bd712413b0f31eb1ffc853019992a3b6.
+
+- FIX 1 — UTC strip times: "01:25 Kyiv barrage begins" and "10:00
+  Sheinbaum parade, Mexico City" were LOCAL times, not UTC. compose.py
+  strip changed ONLY those two values, order kept: "23:25 Kyiv barrage
+  begins" and "16:00 Sheinbaum parade, Mexico City". NEWS.md UTC-strip
+  section corrected to match, with reasoning: Kyiv 23:25 UTC 19 Nov =
+  01:25 local Fri 20 Nov in Kyiv (UTC+2); Sheinbaum 16:00 UTC = 10:00
+  local Mexico City (UTC-6). The other five strip times were already
+  true UTC and are unchanged.
+- FIX 2 — Bukele timezone reasoning (NEWS.md only, panel/image
+  unchanged): panel 12 line now reads "First reported 20 Nov. Filed
+  Thu 19 Nov 20:50 CST San Salvador = Fri 20 Nov 02:50 UTC; first
+  reports dated 20 Nov UTC/Asia (Reuters, AP)."
+- Re-verification: compose.py run 2× byte-identical → entry.png
+  sha256 63e3b31cae4946296f30e8f9410e72a9cd3c4babb85eeb839cb6e48a1745bd0a
+  (185,545 B, 1024×1024); main.ts run 2× with node v22.21.0
+  (~/workspace/tools/node22/bin/node) → /output/entry.png byte-identical
+  to the new entry.png both runs. 300px legibility test: date + 3 hero
+  headlines + 6 numbers all clearly readable at 300×300 — CLEAR PASS.
+  Final render viewed full-size: UTC strip reads clean, no overflow,
+  no clipped footer.
+- Push: entry.png, NEWS.md, gate-run.md only, via GitHub PAT Git Data
+  API (push-fix pattern, no local git commands in the entry dir).
+  LICENSE, README, About untouched.

@@ -64,7 +64,9 @@ TBS/PTI/UKMTO/JP Morgan EMBI) at build time, 22 Nov 2026 ~03:00 WITA.
     1 December. 20 Nov. Sources: Reuters, AFP.
 12. **SAN SALVADOR — CONFIRMED — "Bukele wants a third term"**
     Nayib Bukele launched his third-term bid; vote set 28 February
-    2027. First reported 20 Nov. Sources: Reuters, AP.
+    2027. First reported 20 Nov. Filed Thu 19 Nov 20:50 CST San
+    Salvador = Fri 20 Nov 02:50 UTC; first reports dated 20 Nov
+    UTC/Asia (Reuters, AP). Sources: Reuters, AP.
 13. **CRICKET, INDIA v NZ — CONFIRMED — "Phillips makes 118"**
     Glenn Phillips 118, 216-run stand with Nicholls (175*), New Zealand
     v India Test, day's play 20 Nov. Sources: Reuters, ESPNcricinfo.
@@ -115,10 +117,13 @@ TBS/PTI/UKMTO/JP Morgan EMBI) at build time, 22 Nov 2026 ~03:00 WITA.
 
 ## UTC strip (all times UTC, 20 Nov)
 
-01:25 Kyiv barrage begins · 02:00 Akvan landfall window · 10:00 Sheinbaum
+23:25 Kyiv barrage begins · 02:00 Akvan landfall window · 16:00 Sheinbaum
 parade, Mexico City · 12:31 Florida floods shift north (AP) · 15:00 Tanker
 hit off Oman (UKMTO, ~15:00 GMT) · 18:25 Second judge blocks arch
 (12:25 CST) · 21:00 Anthropic closes −8.5% (16:00 ET).
+
+Reasoning: Kyiv 23:25 UTC 19 Nov = 01:25 local Fri 20 Nov in Kyiv
+(UTC+2); Sheinbaum 16:00 UTC = 10:00 local Mexico City (UTC-6).
 
 ## DATE CHECK — excluded (named in the image footer)
 
@@ -155,8 +160,8 @@ happened yet.
   118 Phillips), 3 heroes, 10 small panels, world map with 13 numbered
   pins (dot + leader-line label), ALSO 22, UTC strip 7, DATE CHECK
   ~2 lines, sources line.
-- entry.png: 1024×1024, 185,801 bytes, sha256
-  ec8d77a1b2617b9c19e04503a71ed3dea33f672d83f95143204b5fe06899f5e8.
+- entry.png: 1024×1024, 185,545 bytes, sha256
+  63e3b31cae4946296f30e8f9410e72a9cd3c4babb85eeb839cb6e48a1745bd0a.
   Deterministic: compose.py re-runs byte-identical; main.ts 2× runs
   byte-identical.
 - 300px legibility test: date + 3 hero headlines + 6 numbers all
